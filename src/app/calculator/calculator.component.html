@@ -10,7 +10,7 @@
         <thead>
           <th
             (click)="getValue(item)"
-            class=" border rounded p-4"
+            class="text-center p-4 border rounded "
             *ngFor="let item of ['+ ', '-', '/', '*']"
           >
             {{ item }}
@@ -20,7 +20,7 @@
           <tr>
             <td
               (click)="getValue(item)"
-              class="p-4  border rounded"
+              class=" text-center p-4 border rounded"
               *ngFor="let item of [7, 8, 9]"
             >
               {{ item }}
@@ -30,7 +30,7 @@
           <tr>
             <td
               (click)="getValue(item)"
-              class="p-4  border rounded"
+              class="text-center p-4  border rounded"
               *ngFor="let item of [4, 5, 6]"
             >
               {{ item }}
@@ -39,7 +39,7 @@
           <tr>
             <td
               (click)="getValue(item)"
-              class="p-4  border rounded"
+              class=" text-center p-4 border rounded"
               *ngFor="let item of [1, 2, 3]"
             >
               {{ item }}
@@ -48,12 +48,12 @@
           <tr>
             <td
               (click)="getValue(item)"
-              class="p-4  border rounded"
+              class=" text-center p-4 border rounded"
               *ngFor="let item of [0, '.']"
             >
               {{ item }}
             </td>
-            <td (click)="reset()" class="p-4 bg-danger text-white rounded">
+            <td (click)="reset()" class=" bg-danger text-center text-white rounded">
               AC
             </td>
           </tr>
