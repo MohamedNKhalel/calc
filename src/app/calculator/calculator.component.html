@@ -1,0 +1,64 @@
+<section [class]="isVisible?'dark':'light'">
+  <div class="vh-100 d-flex justify-content-center  align-items-center">
+    <div class="rounded  border-2 main ">
+      <p class="screen rounded-top text-center">{{ resValue }}</p>
+      <div class="px-3 icons">
+        <i *ngIf="!isVisible" (click)="dark()"class="fa fa-moon cursor-pointer  fa-2x"></i>
+        <i *ngIf="isVisible" (click)="light()" class="fa fa-sun  fa-2x cursor-pointer"></i>
+      </div>
+      <table class="position-relative mt-2 p-2">
+        <thead>
+          <th
+            (click)="getValue(item)"
+            class=" border rounded p-4"
+            *ngFor="let item of ['+ ', '-', '/', '*']"
+          >
+            {{ item }}
+          </th>
+        </thead>
+        <tbody>
+          <tr>
+            <td
+              (click)="getValue(item)"
+              class="p-4  border rounded"
+              *ngFor="let item of [7, 8, 9]"
+            >
+              {{ item }}
+            </td>
+            <td (click)="equal()" class="equal rounded">=</td>
+          </tr>
+          <tr>
+            <td
+              (click)="getValue(item)"
+              class="p-4  border rounded"
+              *ngFor="let item of [4, 5, 6]"
+            >
+              {{ item }}
+            </td>
+          </tr>
+          <tr>
+            <td
+              (click)="getValue(item)"
+              class="p-4  border rounded"
+              *ngFor="let item of [1, 2, 3]"
+            >
+              {{ item }}
+            </td>
+          </tr>
+          <tr>
+            <td
+              (click)="getValue(item)"
+              class="p-4  border rounded"
+              *ngFor="let item of [0, '.']"
+            >
+              {{ item }}
+            </td>
+            <td (click)="reset()" class="p-4 bg-danger text-white rounded">
+              AC
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

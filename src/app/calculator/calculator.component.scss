@@ -1,0 +1,126 @@
+
+
+
+$bg-color:#ffffff;
+$second-color:#000;
+$gray:gray;
+$equal:#09c;
+
+.cursor-pointer{
+    cursor: pointer;
+}
+.dark{
+    background-color: black;
+    
+    .main{
+        background-color: black;
+        box-shadow: 0px 0px 16px -5px white;
+    }
+    i{
+        color: white;
+    }
+    .equal {
+        position: absolute;
+        top: 100px;
+        bottom: 16px;
+        background-color: #086;
+        padding-inline: 17px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        color: $bg-color;
+    }
+    table {
+        border-collapse: separate;
+        border-spacing: 25px 5px; /* horizontal vertical */
+    }
+    .screen{
+        width: 100%;
+        height: 70px;
+        background-color: gray;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding:0 20px;
+        font-size: 50px;
+        font-weight: 700;
+    }
+    th,td{
+        position: relative;
+        background-color: black;
+        color: white;
+        font-size: 18px;
+        transition: all .5s;
+        border: 2px solid transparent;
+        overflow: hidden;
+        box-shadow: 0px 0px 8px -6px  rgba(0, 0, 0, 0.5);
+        &:hover{
+            box-shadow: 0px 0px 15px -5px  white;
+        }
+    }
+}
+.light{
+    .main{
+        background-color: white;
+        box-shadow: 0px 0px 16px -5px black;
+        position: relative;
+        overflow: hidden;
+        &::after{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 10px;
+            top: 0;
+            transform: translateX(-100%);
+            background-image: linear-gradient(to right,red,black,blue);
+        }
+    }
+    .equal {
+        position: absolute;
+        top: 100px;
+        bottom: 16px;
+        background-color: $equal;
+        padding-inline: 17px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        color: $bg-color;
+    }
+    table {
+        border-collapse: separate;
+        border-spacing: 25px 5px; /* horizontal vertical */
+    }
+    .screen{
+        width: 100%;
+        height: 70px;
+        background-color: $second-color;
+        color: $bg-color;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding:0 20px;
+        font-size: 50px;
+        font-weight: 700;
+    }
+    th,td{
+        position: relative;
+        font-size: 18px;
+        transition: all .5s ease;
+        border: 2px solid transparent;
+        overflow: hidden;
+        box-shadow: 0px 0px 8px -6px  rgba(0, 0, 0, 0.5);
+        &:hover{
+            box-shadow: 0px 0px 15px -5px  black;
+        }
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    .main{
+        width: 95%;
+    }
+}
